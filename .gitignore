@@ -35,3 +35,7 @@ Temporary Items
 
 # debug file
 _site
+
+# debug jekyll
+Gemfile
+Gemfile.lock
