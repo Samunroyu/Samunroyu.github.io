@@ -39,3 +39,4 @@ _site
 # debug jekyll
 Gemfile
 Gemfile.lock
+.aider*
