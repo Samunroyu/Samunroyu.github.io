@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    </head>
+    <body>
+        <nav>
+            <a href="{{ .Site.BaseURL }}">首页</a>
+        </nav>
+        <hr>
+        {{ block "main" . }}{{ end }}
+    </body>
+</html>
