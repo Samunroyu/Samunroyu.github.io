@@ -1,12 +1,24 @@
 {{ define "main" }}
-    <h1><span class="prefix">&gt;</span>ls -la /posts/</h1>
+<div class="hero">
+    <img src="{{ .Site.Params.avatar }}" alt="Avatar" class="avatar">
+    <h1>&gt; hello_world</h1>
+    <p class="hero-description">{{ .Site.Params.description }}</p>
+    <div class="hero-links">
+        <a href="/about">&gt; about_me</a>
+        <a href="https://github.com" target="_blank">&gt; github</a>
+    </div>
+</div>
+
+<div class="posts-section">
+    <h2><span class="prefix">&gt;</span>latest_logs</h2>
     {{ range .Pages }}
         <article>
-            <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+            <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
             <span class="post-meta">
                 <span class="prefix">[</span><time datetime="{{ .Date.Format `2006-01-02` }}">{{ .Date.Format `2006-01-02` }}</time><span class="prefix">]</span>
             </span>
             <p>{{ .Summary }}</p>
         </article>
     {{ end }}
+</div>
 {{ end }}

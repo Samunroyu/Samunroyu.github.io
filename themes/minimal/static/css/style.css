@@ -76,11 +76,12 @@ nav {
     margin: -40px -50px 30px -50px;
     border-bottom: 1px solid var(--accent-primary);
     display: flex;
+    justify-content: space-between;
     align-items: center;
     font-family: 'Share Tech Mono', monospace;
 }
 
-nav a {
+.nav-brand a {
     text-decoration: none;
     color: var(--nav-text);
     font-weight: bold;
@@ -89,9 +90,85 @@ nav a {
     transition: all 0.3s ease;
 }
 
-nav a:hover {
+.nav-brand a:hover {
     color: #fff;
     text-shadow: 0 0 10px var(--accent-primary), 0 0 20px var(--accent-primary);
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.nav-links a:hover {
+    color: var(--accent-primary);
+    text-shadow: 0 0 8px var(--accent-primary);
+    border-bottom: 1px solid var(--accent-primary);
+}
+
+.hero {
+    text-align: center;
+    padding: 40px 0;
+    border-bottom: 1px dashed var(--border-color);
+    margin-bottom: 40px;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid var(--accent-primary);
+    box-shadow: 0 0 15px var(--accent-primary);
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    border-bottom: none;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+}
+
+.hero-description {
+    font-size: 1.2em;
+    color: var(--accent-secondary);
+    text-shadow: 0 0 5px rgba(188, 19, 254, 0.4);
+    margin-bottom: 20px;
+}
+
+.hero-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.hero-links a {
+    font-family: 'Share Tech Mono', monospace;
+    padding: 8px 16px;
+    border: 1px solid var(--accent-primary);
+    color: var(--accent-primary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.hero-links a:hover {
+    background-color: var(--accent-primary);
+    color: var(--bg-color);
+    box-shadow: 0 0 10px var(--accent-primary);
+}
+
+.posts-section h2 {
+    color: #fff;
+    font-family: 'Share Tech Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid var(--accent-primary);
+    padding-bottom: 10px;
+    margin-bottom: 25px;
 }
 
 article {
@@ -115,14 +192,14 @@ h1, h2, h3 {
 
 h1 {
     font-size: 2.2em;
-    border-bottom: 2px solid var(--accent-primary);
-    padding-bottom: 10px;
-    margin-bottom: 25px;
-    text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
 }
 
 h2 {
     font-size: 1.6em;
+}
+
+h3 {
+    font-size: 1.3em;
 }
 
 a {

@@ -1,4 +1,9 @@
 baseURL = 'https://example.org/'
 languageCode = 'zh-cn'
-title = '我的新 Hugo 站点'
+title = '我的赛博空间'
 theme = 'minimal'
+
+[params]
+  author = "CyberNinja"
+  description = "全栈开发者 / 开源爱好者 / 赛博朋克"
+  avatar = "https://api.dicebear.com/7.x/bottts/svg?seed=CyberNinja&backgroundColor=0a0e17"
