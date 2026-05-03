@@ -13,12 +13,12 @@
 }
 
 @keyframes flicker {
-    0%, 19.9%, 22%, 62.9%, 64%, 64.9%, 70%, 100% {
-        opacity: 1;
-    }
-    20%, 21.9%, 63%, 63.9%, 65%, 69.9% {
-        opacity: 0.33;
-    }
+    0%, 100% { opacity: 1; }
+    41% { opacity: 1; }
+    42% { opacity: 0.8; }
+    43% { opacity: 1; }
+    45% { opacity: 0.3; }
+    46% { opacity: 1; }
 }
 
 @keyframes scanline {
