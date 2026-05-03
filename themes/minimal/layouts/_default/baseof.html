@@ -4,16 +4,19 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{{ `css/style.css` | relURL }}">
     </head>
     <body>
         <div class="container">
             <nav>
-                <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+                <span class="prefix">></span><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
             </nav>
             {{ block "main" . }}{{ end }}
             <footer>
-                <p>Powered by Hugo</p>
+                <p>> system_ready_ <span class="blink">_</span></p>
             </footer>
         </div>
     </body>

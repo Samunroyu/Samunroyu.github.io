@@ -1,21 +1,61 @@
 :root {
-    --bg-color: #f8f9fa;
-    --content-bg: #ffffff;
-    --text-color: #212529;
-    --link-color: #0d6efd;
-    --border-color: #dee2e6;
-    --hover-color: #0a58ca;
-    --nav-bg: #343a40;
-    --nav-text: #ffffff;
+    --bg-color: #0a0e17;
+    --content-bg: #111827;
+    --text-color: #d1d5db;
+    --link-color: #00f3ff;
+    --border-color: #1f2937;
+    --hover-color: #bc13fe;
+    --nav-bg: #0a0e17;
+    --nav-text: #00f3ff;
+    --accent-primary: #00f3ff;
+    --accent-secondary: #bc13fe;
+    --grid-color: rgba(0, 243, 255, 0.05);
+}
+
+@keyframes flicker {
+    0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+        opacity: 1;
+    }
+    20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+        opacity: 0.33;
+    }
+}
+
+@keyframes scanline {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.8;
     color: var(--text-color);
     background-color: var(--bg-color);
     margin: 0;
     padding: 0;
+    background-image: 
+        linear-gradient(var(--grid-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+    background-size: 40px 40px;
+    position: relative;
+}
+
+body::after {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 2;
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
 }
 
 .container {
@@ -23,17 +63,21 @@ body {
     margin: 40px auto;
     padding: 40px 50px;
     background-color: var(--content-bg);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    border-radius: 8px;
+    border: 1px solid var(--accent-primary);
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.1), inset 0 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    position: relative;
+    z-index: 10;
 }
 
 nav {
     background-color: var(--nav-bg);
     padding: 15px 30px;
     margin: -40px -50px 30px -50px;
-    border-radius: 8px 8px 0 0;
+    border-bottom: 1px solid var(--accent-primary);
     display: flex;
     align-items: center;
+    font-family: 'Share Tech Mono', monospace;
 }
 
 nav a {
@@ -41,17 +85,19 @@ nav a {
     color: var(--nav-text);
     font-weight: bold;
     font-size: 1.4em;
-    transition: color 0.2s;
+    text-shadow: 0 0 5px var(--accent-primary);
+    transition: all 0.3s ease;
 }
 
 nav a:hover {
-    color: #adb5bd;
+    color: #fff;
+    text-shadow: 0 0 10px var(--accent-primary), 0 0 20px var(--accent-primary);
 }
 
 article {
     margin-bottom: 40px;
     padding-bottom: 25px;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px dashed var(--border-color);
 }
 
 article:last-child {
@@ -61,14 +107,18 @@ article:last-child {
 h1, h2, h3 {
     margin-top: 0;
     margin-bottom: 15px;
-    color: var(--text-color);
+    color: #fff;
+    font-family: 'Share Tech Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 h1 {
     font-size: 2.2em;
-    border-bottom: 2px solid var(--border-color);
+    border-bottom: 2px solid var(--accent-primary);
     padding-bottom: 10px;
     margin-bottom: 25px;
+    text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
 }
 
 h2 {
@@ -78,19 +128,23 @@ h2 {
 a {
     color: var(--link-color);
     text-decoration: none;
-    transition: color 0.2s;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
 }
 
 a:hover {
     color: var(--hover-color);
-    text-decoration: underline;
+    text-shadow: 0 0 8px var(--hover-color);
+    border-bottom: 1px solid var(--hover-color);
 }
 
 .post-meta {
     font-size: 0.9em;
-    color: #6c757d;
+    color: var(--accent-secondary);
     margin-bottom: 15px;
     display: block;
+    font-family: 'Share Tech Mono', monospace;
+    text-shadow: 0 0 5px rgba(188, 19, 254, 0.4);
 }
 
 .content {
@@ -100,8 +154,19 @@ a:hover {
 footer {
     margin-top: 40px;
     padding-top: 20px;
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid var(--accent-primary);
     text-align: center;
-    color: #6c757d;
+    color: var(--accent-primary);
     font-size: 0.9em;
+    font-family: 'Share Tech Mono', monospace;
+    text-shadow: 0 0 5px var(--accent-primary);
+}
+
+.blink {
+    animation: flicker 1.5s infinite;
+}
+
+.prefix {
+    color: var(--accent-secondary);
+    margin-right: 10px;
 }
