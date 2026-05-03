@@ -2,7 +2,7 @@
 
 {{ define "main" }}
     <article>
-        <h1><span class="prefix">></span>cat {{ .Title }}</h1>
+        <h1><span class="prefix">&gt;</span>cat {{ .Title }}</h1>
         <span class="post-meta">
             <span class="prefix">[</span><time datetime="{{ .Date.Format `2006-01-02` }}">{{ .Date.Format `2006-01-02` }}</time><span class="prefix">]</span>
         </span>

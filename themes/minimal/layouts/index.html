@@ -1,5 +1,5 @@
 {{ define "main" }}
-    <h1><span class="prefix">></span>ls -la /posts/</h1>
+    <h1><span class="prefix">&gt;</span>ls -la /posts/</h1>
     {{ range .Pages }}
         <article>
             <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
