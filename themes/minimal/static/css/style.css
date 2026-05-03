@@ -1,14 +1,17 @@
 :root {
-    --bg-color: #ffffff;
-    --text-color: #333333;
-    --link-color: #0066cc;
-    --border-color: #eeeeee;
-    --hover-color: #004499;
+    --bg-color: #f8f9fa;
+    --content-bg: #ffffff;
+    --text-color: #212529;
+    --link-color: #0d6efd;
+    --border-color: #dee2e6;
+    --hover-color: #0a58ca;
+    --nav-bg: #343a40;
+    --nav-text: #ffffff;
 }
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    line-height: 1.6;
+    line-height: 1.8;
     color: var(--text-color);
     background-color: var(--bg-color);
     margin: 0;
@@ -16,32 +19,38 @@ body {
 }
 
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 40px 50px;
+    background-color: var(--content-bg);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border-radius: 8px;
 }
 
 nav {
-    border-bottom: 1px solid var(--border-color);
-    padding: 10px 0;
-    margin-bottom: 20px;
+    background-color: var(--nav-bg);
+    padding: 15px 30px;
+    margin: -40px -50px 30px -50px;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    align-items: center;
 }
 
 nav a {
     text-decoration: none;
-    color: var(--link-color);
+    color: var(--nav-text);
     font-weight: bold;
-    font-size: 1.2em;
-    margin-right: 15px;
+    font-size: 1.4em;
+    transition: color 0.2s;
 }
 
 nav a:hover {
-    color: var(--hover-color);
+    color: #adb5bd;
 }
 
 article {
-    margin-bottom: 30px;
-    padding-bottom: 20px;
+    margin-bottom: 40px;
+    padding-bottom: 25px;
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -51,19 +60,48 @@ article:last-child {
 
 h1, h2, h3 {
     margin-top: 0;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+h1 {
+    font-size: 2.2em;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-size: 1.6em;
 }
 
 a {
     color: var(--link-color);
     text-decoration: none;
+    transition: color 0.2s;
 }
 
 a:hover {
+    color: var(--hover-color);
     text-decoration: underline;
 }
 
 .post-meta {
     font-size: 0.9em;
-    color: #666666;
-    margin-bottom: 10px;
+    color: #6c757d;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.content {
+    font-size: 1.1em;
+}
+
+footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    color: #6c757d;
+    font-size: 0.9em;
 }

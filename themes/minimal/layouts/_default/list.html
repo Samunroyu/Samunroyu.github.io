@@ -3,9 +3,9 @@
     {{ range .Pages }}
         <article>
             <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-            <div class="post-meta">
+            <span class="post-meta">
                 <time datetime="{{ .Date.Format `2006-01-02` }}">{{ .Date.Format `2006-01-02` }}</time>
-            </div>
+            </span>
             <p>{{ .Summary }}</p>
         </article>
     {{ end }}
