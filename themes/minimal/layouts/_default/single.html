@@ -1,0 +1,26 @@
+{{ define "title" }}{{ .Title }} · {{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+    <article class="post-full">
+        <h1>{{ .Title }}</h1>
+        {{ if eq .Type "posts" }}
+        <span class="post-meta">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+            {{ with .Params.author }} · {{ . }}{{ end }}
+        </span>
+        {{ end }}
+        <div class="content">
+            {{ .Content }}
+        </div>
+        {{ if and (eq .Type "posts") .Params.tags }}
+        <div class="post-tags-section">
+            <h4>Tags</h4>
+            <div class="blog-tags">
+                {{ range .Params.tags }}
+                <a href="{{ "/tags/" | relURL }}{{ . | urlize }}" class="tag">{{ . }}</a>
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+    </article>
+{{ end }}

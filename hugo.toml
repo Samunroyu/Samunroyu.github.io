@@ -1,0 +1,33 @@
+baseURL = '/'
+languageCode = 'zh-cn'
+title = 'Samunro Blog'
+theme = 'minimal'
+hasCJKLanguage = true
+paginate = 10
+relativeURLs = true
+
+[params]
+  author = "Samunro"
+  description = "C/C++ 开发者 / 存储与分布式 / AI 爱好者"
+  avatar = "img/avatar_m.jpg"
+  github = "https://github.com/Samunroyu"
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+    lineNos = false
+    lineNumbersInTable = false
+
+[taxonomies]
+  tag = 'tags'
+  category = 'categories'
+
+[permalinks]
+  posts = '/:year/:month/:day/:slug/'
+
+[outputs]
+  home = ['HTML', 'RSS']
+  page = ['HTML']
+  section = ['HTML', 'RSS']
+  taxonomy = ['HTML', 'RSS']
+  term = ['HTML', 'RSS']

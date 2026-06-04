@@ -1,0 +1,28 @@
+{{ define "title" }}{{ .Title }} · {{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+    <div class="section-header">
+        <h2>Blog</h2>
+    </div>
+    <div class="posts-list-page">
+        {{ range $idx, $post := .Pages }}
+        <div class="blog-row" onclick="location.href='{{ $post.Permalink }}'">
+            <div class="blog-number">{{ printf "%02d" (add $idx 1) }}</div>
+            <div class="blog-body">
+                <h3 class="blog-title"><a href="{{ $post.Permalink }}">{{ $post.Title }}</a></h3>
+                <div class="blog-meta">
+                    <time datetime="{{ $post.Date.Format "2006-01-02" }}">{{ $post.Date.Format "2006-01-02" }}</time>
+                </div>
+                {{ with $post.Params.tags }}
+                <div class="blog-tags">
+                    {{ range . }}
+                    <span class="tag">{{ . }}</span>
+                    {{ end }}
+                </div>
+                {{ end }}
+            </div>
+            <div class="blog-arrow">→</div>
+        </div>
+        {{ end }}
+    </div>
+{{ end }}
