@@ -1,11 +1,15 @@
 ---
 title: "关于我"
-date: 2023-10-27
-draft: false
+date: 2025-01-07
 ---
 
-欢迎来到我的赛博空间。我是一名热爱技术的开发者，喜欢探索前沿科技和开源项目。
+> 冰冻三尺 非一日之寒
+> 积土成山 非斯须之作
 
-在这个博客里，我会分享关于编程、系统架构、以及赛博朋克文化的思考。
+Hey，我是**经纬 (Samunro)**，一只程序猿。
 
-> "The street finds its own uses for things." - William Gibson
+关注 **C/C++、存储、分布式系统、Hadoop** 等技术领域。
+
+工作、学习之余，我还是一个篮球爱好者。
+
+这是我的个人博客，使用 [Hugo](https://gohugo.io/) 构建。GitHub 主页：[👉GitHub·Samunro](https://github.com/Samunroyu) 。如果有什么问题，欢迎提出探讨~

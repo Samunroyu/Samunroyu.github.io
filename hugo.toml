@@ -1,9 +1,33 @@
-baseURL = 'https://example.org/'
+baseURL = '/'
 languageCode = 'zh-cn'
-title = '我的赛博空间'
+title = 'Samunro Blog'
 theme = 'minimal'
+hasCJKLanguage = true
+paginate = 10
+relativeURLs = true
 
 [params]
-  author = "CyberNinja"
-  description = "全栈开发者 / 开源爱好者 / 赛博朋克"
-  avatar = "https://api.dicebear.com/7.x/bottts/svg?seed=CyberNinja&backgroundColor=0a0e17"
+  author = "Samunro"
+  description = "C/C++ 开发者 / 存储与分布式 / AI 爱好者"
+  avatar = "img/avatar_m.jpg"
+  github = "https://github.com/Samunroyu"
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+    lineNos = false
+    lineNumbersInTable = false
+
+[taxonomies]
+  tag = 'tags'
+  category = 'categories'
+
+[permalinks]
+  posts = '/:year/:month/:day/:slug/'
+
+[outputs]
+  home = ['HTML', 'RSS']
+  page = ['HTML']
+  section = ['HTML', 'RSS']
+  taxonomy = ['HTML', 'RSS']
+  term = ['HTML', 'RSS']

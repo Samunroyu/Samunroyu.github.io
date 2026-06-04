@@ -1,0 +1,14 @@
+{{ define "title" }}标签 · {{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+    <div class="tags-page">
+        <h1>Tags</h1>
+        <div class="tags-cloud">
+            {{ range .Site.Taxonomies.tags }}
+            <a href="{{ .Page.Permalink }}" class="tag">
+                {{ .Page.Title }} <span class="tag-count">({{ .Count }})</span>
+            </a>
+            {{ end }}
+        </div>
+    </div>
+{{ end }}

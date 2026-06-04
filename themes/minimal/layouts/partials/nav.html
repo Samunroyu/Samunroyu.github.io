@@ -1,0 +1,10 @@
+<nav>
+    <div class="nav-brand">
+        <a href="{{ .Site.Home.RelPermalink }}">{{ .Site.Title }}</a>
+    </div>
+    <div class="nav-links">
+        <a href="{{ "/about" | relURL }}">About</a>
+        <a href="{{ "/posts" | relURL }}">Blog</a>
+        <a href="{{ .Site.Params.github }}" target="_blank">GitHub</a>
+    </div>
+</nav>
