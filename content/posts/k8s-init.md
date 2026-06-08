@@ -1,6 +1,6 @@
 ---
 title: "WSL Kind Kubernetes + CloudNative-PG 部署实战"
-date: 2025-06-09
+date: 2026-06-09
 author: "Samunroyu"
 tags: ["Kubernetes", "PostgreSQL", "DevOps", "WSL"]
 description: "从零搭建 K8s 集群到 PostgreSQL 高可用部署的全链路记录"
