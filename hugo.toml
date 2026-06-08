@@ -5,6 +5,7 @@ theme = 'minimal'
 hasCJKLanguage = true
 paginate = 10
 relativeURLs = true
+buildFuture = true
 
 [params]
   author = "Samunro"
