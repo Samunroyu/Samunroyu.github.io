@@ -84,6 +84,7 @@ kubectl describe node dev-cluster-worker
 ### 2. 生产级高可用清单 (`pg-cluster.yaml`)
 
 ```yaml {filename="pg-cluster.yaml"}
+apiVersion: postgresql.cnpg.io/v1
 kind: Cluster
 metadata:
   name: my-ha-postgres
