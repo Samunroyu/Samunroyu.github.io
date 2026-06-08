@@ -10,12 +10,14 @@ description: "从零搭建 K8s 集群到 PostgreSQL 高可用部署的全链路�
 最近在公司需要部署 spark 等相关组件，在使用 k8s 时遇见了一些问题，希望能够有一个环境能够测试下，因此决定在 wsl 部署测试。这里记录下从零搭建、避坑调优到最终验证的全链路闭环。
 
 # 基础环境
-CPU: Intel(R) Core(TM) Ultra 9 275HX
-内存: 32gb（分给 wsl 16g）
-K8s 基础组件：
-kind：v0.20.0
-kubectl：v1.36.1
-docker: v29.1.3
+
+- **CPU**: Intel(R) Core(TM) Ultra 9 275HX
+- **内存**: 32GB（分给 WSL 16GB）
+- **K8s 基础组件**：
+  - kind：v0.20.0
+  - kubectl：v1.36.1
+  - docker：v29.1.3
+
 ## 安装命令
 ``` shell
 # 下载最新稳定版的 Kind 二进制文件 
