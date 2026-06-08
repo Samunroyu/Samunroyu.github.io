@@ -49,7 +49,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 ## 一、 基础架构声明与避坑 YAML
 
 kind 启动 k8s 节点
-``` yaml
+```yaml {filename="kind-prod.yaml"}
 kind: Cluster
 apiVersion: kind.x-k8s.io/v1alpha4
 nodes:
@@ -83,8 +83,7 @@ kubectl describe node dev-cluster-worker
 
 ### 2. 生产级高可用清单 (`pg-cluster.yaml`)
 
-``` yaml
-apiVersion: postgresql.cnpg.io/v1
+```yaml {filename="pg-cluster.yaml"}
 kind: Cluster
 metadata:
   name: my-ha-postgres
