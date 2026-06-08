@@ -5,7 +5,7 @@
         <h2>Blog</h2>
     </div>
     <div class="posts-list-page">
-        {{ range $idx, $post := .Pages }}
+        {{ range $idx, $post := .Pages.ByDate.Reverse }}
         <div class="blog-row" onclick="location.href='{{ $post.Permalink }}'">
             <div class="blog-number">{{ printf "%02d" (add $idx 1) }}</div>
             <div class="blog-body">
