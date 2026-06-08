@@ -117,9 +117,7 @@ spec:
 
 一旦遇到网络卡壳，应当立刻切断无谓的等待，启动“宿主机拦截 + 强灌全集群”连招：
 
-Bash
-
-```
+``` bash
 # ==================== 阶段 A：拉取并灌入 Operator 机器人镜像 ====================
 # 1. 宿主机暴力拉取
 docker pull ghcr.io/cloudnative-pg/cloudnative-pg:1.29.1
